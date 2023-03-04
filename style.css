@@ -1,0 +1,208 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Golos", serif;
+    list-style-type: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    outline: none;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+/* variables color */
+:root {
+    --primary-color: #2b81e4;
+    --secondary-color: #eee;
+    --white-color: #fff;
+    --grey-color: #555;
+    --light-grey-color: #777;
+  }
+
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    background-color: var(--secondary-color);
+    /* create space around it */
+    margin: 3.5rem;
+    box-shadow: 0 1rem 3rem var(--grey-color);
+    overflow: hidden;
+}
+
+.header{
+    width: 100%;
+    /* height calculation to make same space for header */
+    height: calc(100vh - 7rem);
+    background: linear-gradient(rgba(18,113,255,0.5),
+    rgba(18,113,255,0.3)),url(images/header-bg.jpeg) center no-repeat;
+    background-size: cover;
+    position: relative;
+    /* create 3d environment for balloon image */
+    perspective: 100rem;
+
+}
+
+/* customize header text(parent element) */
+.header-text{
+    /* common style */
+    text-align: center;
+    text-transform: uppercase;
+    /* create space between letters */
+    letter-spacing: 0.1rem;
+    text-shadow: 0 .3rem .5rem var(--grey-color);
+}
+
+.heading{
+    font-size: 8rem;
+    color: var(--white-color);
+}
+
+.header-paragraph{
+    font-size: 3rem;
+    font-weight: 500;
+    color: var(--secondary-color);
+    /* define max with for paragraph */
+    max-width: 70rem;
+    margin: auto;
+}
+/* end of header elements */
+
+/* logo */
+.logo{
+    position: absolute;
+    /* place logo to top-right corner */
+    top: 4rem;
+    right: 4rem;
+}
+
+/* place parent element for span side by side horizontally */
+.logo h1{
+    display: flex;
+}
+
+
+.logo h1 span{
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    background-color: var(--white-color);
+    width: 3.5rem;
+    height: 3.5rem;
+    /* make it rounded */
+    margin: 0.5rem;
+    border-radius: 50%;
+    /* to make it cneter use center class element */
+}
+
+/* prvide delay times for every letters */
+.logo h1 span:nth-child(1){
+    animation: drop-letters;
+    animation-duration: 5s;
+    /* delay time for 1st letter */
+    animation-delay: .1s;
+    animation-iteration-count: infinite;
+}
+
+.logo h1 span:nth-child(2){
+    animation: drop-letters 5s .2s infinite;
+}
+
+.logo h1 span:nth-child(3){
+    animation: drop-letters 5s .3s infinite;
+}
+.logo h1 span:nth-child(4){
+    animation: drop-letters 5s .4s infinite;
+}
+.logo h1 span:nth-child(5){
+    animation: drop-letters 5s .5s infinite;
+}
+.logo h1 span:nth-child(6){
+    animation: drop-letters 5s .6s infinite;
+}
+.logo h1 span:nth-child(7){
+    animation: drop-letters 5s .7s infinite;
+}
+.logo h1 span:nth-child(8){
+    animation: drop-letters 5s .8s infinite;
+}
+.logo h1 span:nth-child(9){
+    animation: drop-letters 5s .9s infinite;
+}
+.logo h1 span:nth-child(10){
+    animation: drop-letters 5s .9s infinite;
+}
+
+
+
+
+/* create animation */
+@keyframes drop-letters {
+    /* define css rules & steps */
+    /* step 1-dont move letters */
+    0%{
+        transform: translateY(0);
+    }
+    10%{
+        transform: translateY(0);
+    }
+    /* move lettrs up */
+    15%{
+        transform: translateY(-100%);
+    }
+    /* drop letters down back */
+    20%{
+        transform: translateY(0);
+    }
+    /* letter stay in position */
+    100%{
+        transform: translateY(0);
+    }
+    
+}
+
+/* end of logo */
+
+/* create 3d environment for balloon image refer to .header */
+.header-image{
+    width: 35%;
+    /* to testkeyrames */
+    /* transform: translateZ(40rem); */
+    /* apply keyframes */
+    animation:  image-float 150s infinite;
+}
+
+@keyframes image-float {
+    /* positive value move object closer */
+    0%{
+        transform: translateZ(40rem); 
+         /*change opacity atthe same time  */
+         opacity: 1;
+    }
+    40%{
+        /* move image to the right side at same time */
+        transform: translateZ(-500rem) translateX(150rem);
+        opacity: 0.8;
+    }
+    70%{
+        /* move image to the right side at same time */
+        transform: translateZ(-1500rem) translateX(800rem);
+        opacity: 0.6;
+    }
+    80%{
+        /* move image to the right side at same time */
+        transform: translateZ(-50rem) translateX(100rem);
+        opacity: 0.8;
+    }
+    100%{
+        /* back tooriginal size */
+        transform: translateZ(-40rem);
+        opacity: 1;
+    }
+}

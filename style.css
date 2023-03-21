@@ -43,7 +43,7 @@ html{
     /* height calculation to make same space for header */
     height: calc(100vh - 7rem);
     background: linear-gradient(rgba(18,113,255,0.5),
-    rgba(18,113,255,0.3)),url(images/header-bg.jpeg) center no-repeat;
+    rgba(18,113,255,0.3)),url(images/klcc-bg.jpg) center no-repeat;
     background-size: cover;
     position: relative;
     /* create 3d environment for balloon image */

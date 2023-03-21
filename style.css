@@ -430,3 +430,42 @@ html{
 }
 
 /* stories */
+
+/* contact */
+.contact{
+    padding: 15rem 0 20rem 0;
+    text-align: center;
+    background: url('/images/contact-us-bg.png') center no-repeat;
+}
+
+.contact-heading{
+    font-size: 7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .5rem;
+    color: var(--white-color);
+    text-shadow: 0 1rem 2rem black;
+    margin-bottom: 8rem;
+}
+
+.contact-form{
+    width: 70rem;
+    height: 50rem;
+    background-color: whitesmoke;
+    margin: auto;
+    /* change input group from horizontal to vertical */
+    flex-direction: column;
+    border-radius: .5rem;
+    box-shadow: 0 1rem 3rem black;
+}
+
+.input-group{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-groups{
+    width: 100%;
+}
+/* contact */
